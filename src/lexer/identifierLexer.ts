@@ -1,6 +1,7 @@
 import IToken from './token';
 import Lexer from './lexer';
 import TokenKind from './tokenKind';
+import { isDigit } from './numericLiteralLexer';
 
 export default function lexIdentifier(lexer: Lexer): IToken | null {
   if(!isIdentifierStart(lexer.current())) return null;
@@ -14,10 +15,14 @@ export default function lexIdentifier(lexer: Lexer): IToken | null {
   return lexer.newToken(TokenKind.Identifier, offset, identifierName);
 }
 
-function isIdentifierStart(character: string): boolean {
-  return new RegExp('^[a-zA-Z_]$').test(character);
+export function isIdentifierStart(character: string): boolean {
+  return isLetter(character) || character === '_';
+}
+
+export function isLetter(character: string): boolean {
+  return new RegExp('^[a-zA-Z]$').test(character);
 }
 
 export function isIdentifierMiddle(character: string): boolean {
-  return new RegExp('^[a-zA-Z_0-9]$').test(character);
+  return isIdentifierStart(character) || isDigit(character);
 }

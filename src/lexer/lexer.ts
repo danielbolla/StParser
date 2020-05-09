@@ -3,6 +3,7 @@ import lexOperator from './operatorLexer';
 import TokenKind from './tokenKind';
 import lexIdentifier from './identifierLexer';
 import lexWhiteSpace from './whitespaceLexer';
+import lexLiteral from './literalLexer';
 
 export default class Lexer {
   private index = 0;
@@ -10,7 +11,7 @@ export default class Lexer {
   constructor(private code: string) {}
 
   current = (): string => this.code[this.index];
-  lookAhead = (offset: number, length = 1): string => this.code.substr(this.index + offset, length);
+  lookAhead = (offset = 1, length = 1): string => this.code.substr(this.index + offset, length);
 
   lex(): IToken[] {
     const tokens: IToken[] = [];
@@ -38,6 +39,7 @@ export default class Lexer {
 
     if(token = lexOperator(this)) return token;
     else if(token = lexWhiteSpace(this)) return token;
+    else if(token = lexLiteral(this)) return token;
     else if(token = lexIdentifier(this)) return token;
     else {
       return {

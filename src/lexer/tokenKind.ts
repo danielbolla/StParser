@@ -96,6 +96,12 @@ enum TokenKind {
   Identifier,
 
   // literals
+  BooleanLiteral,
+  IntegerLiteral,
+  RealLiteral,
+  StringLiteral,
+  DateLiteral,
+  TimeOfDateLiteral,
 
   // comments
 

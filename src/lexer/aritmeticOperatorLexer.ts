@@ -40,7 +40,8 @@ export default function lexArithmeticOperator(lexer: Lexer): IToken | null {
       ) return lexer.newToken(TokenKind.SizeOfOperator, 6);
 
       return null;
-  }
 
-  return null;
+    default:
+      return null;
+  }
 }
