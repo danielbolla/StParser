@@ -1,13 +1,13 @@
 enum TokenKind {
   // keywords
-  TryKeyword,
-  CatchKeyword,
-  FinallyKeyword,
-  EndTryKeyword,
+  _TryKeyword,
+  _CatchKeyword,
+  _FinallyKeyword,
+  _EndTryKeyword,
 
   // separators
   WhitespaceSeparator,
-  NewLineSeparator,
+  _NewLineSeparator,
 
   // Operators
 
@@ -21,76 +21,76 @@ enum TokenKind {
     SizeOfOperator,
 
     // Bitstring Operators
-    AndOperator,
-    OrOperator,
-    XOrOperator,
-    NotOperator,
-    AndThenOperator,
-    OrElseOperator,
+    _AndOperator,
+    _OrOperator,
+    _XOrOperator,
+    _NotOperator,
+    _AndThenOperator,
+    _OrElseOperator,
 
     // Bitshift Operators
-    ShiftLeftOperator,
-    ShiftRightOperator,
-    RotateLeftOperator,
-    RotateRightOperator,
+    _ShiftLeftOperator,
+    _ShiftRightOperator,
+    _RotateLeftOperator,
+    _RotateRightOperator,
 
     // Selection Operators
-    SelectOperator,
-    MaximumOperator,
-    MinimumOperator,
-    LimitOperator,
-    MultiplexerOperator,
+    _SelectOperator,
+    _MaximumOperator,
+    _MinimumOperator,
+    _LimitOperator,
+    _MultiplexerOperator,
 
     // Comparison Operators
-    GreaterThanOperator,
-    LessThanOperator,
-    LessEqualOperator,
-    GreaterEqualOperator,
-    EqualOperator,
-    NotEqualOperator,
+    _GreaterThanOperator,
+    _LessThanOperator,
+    _LessEqualOperator,
+    _GreaterEqualOperator,
+    _EqualOperator,
+    _NotEqualOperator,
 
     // Address Operators
-    AddressOperator,
-    ContentOperator,
-    BitAddressOperator,
+    _AddressOperator,
+    _ContentOperator,
+    _BitAddressOperator,
 
     // Call Operators
-    CallOperator,
+    _CallOperator,
 
     // Type Conversion Operators
     // TODO
 
     // Numeric Operators
-    AbsoluteOperator,
-    SquareRootOperator,
-    NatoralLogrithmOperator,
-    LogarithmOperator,
-    ExponentialOperator,
-    PowerOfOperator,
-    SineOperator,
-    ArcSineOperator,
-    CosineOperator,
-    TangentOperator,
-    ArcCosineOperator,
-    ArcTangentOperator,
+    _AbsoluteOperator,
+    _SquareRootOperator,
+    _NatoralLogrithmOperator,
+    _LogarithmOperator,
+    _ExponentialOperator,
+    _PowerOfOperator,
+    _SineOperator,
+    _ArcSineOperator,
+    _CosineOperator,
+    _TangentOperator,
+    _ArcCosineOperator,
+    _ArcTangentOperator,
 
     // Namespace Operators
     // TODO ???
 
     // Multicore Operators
-    TestAndSetOperator,
-    CompareAndSwapOperator,
-    XAddOperator,
+    _TestAndSetOperator,
+    _CompareAndSwapOperator,
+    _XAddOperator,
 
     // Special Operators
-    DeleteOperator,
-    IsValidReferenceOperator,
-    NewOperator,
-    QueryInterfaceOperator,
-    QueryPointerOperator,
-    InitializeOperator,
-    PositionOperator,
-    PouNameOperator,
+    _DeleteOperator,
+    _IsValidReferenceOperator,
+    _NewOperator,
+    _QueryInterfaceOperator,
+    _QueryPointerOperator,
+    _InitializeOperator,
+    _PositionOperator,
+    _PouNameOperator,
 
   // identifier
   Identifier,
