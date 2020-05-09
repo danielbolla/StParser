@@ -1,16 +1,17 @@
 {
-  "name": "StParser",
+  "name": "st-parser",
   "version": "0.0.0",
   "description": "Parse structured text code.",
   "main": "index.ts",
   "scripts": {
     "start": "ts-node ./src/index.ts",
+    "start-watch": "nodemon",
     "test": "mocha -r ts-node/register test/**/*.ts",
     "test-watch": "mocha -r ts-node/register test/**/*.ts --watch"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/danielbolla/"
+    "url": "https://github.com/danielbolla/StParser"
   },
   "keywords": [
     "st",
@@ -22,9 +23,9 @@
   "author": "Daniel Bolla",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danielbolla/"
+    "url": "https://github.com/danielbolla/StParser/issues"
   },
-  "homepage": "https://github.com/danielbolla/",
+  "homepage": "https://github.com/danielbolla//StParser",
   "devDependencies": {
     "@types/chai": "^4.2.11",
     "@types/fs-extra": "^8.1.0",
