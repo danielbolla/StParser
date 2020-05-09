@@ -1,0 +1,12 @@
+{
+	"typescript.preferences.quoteStyle": "single",
+	"eslint.validate": [
+		"typescript"
+	],
+	"eslint.options": {
+		"ext": [".ts"]
+	},
+
+	"mochaExplorer.files": "test/**/*.ts",
+	"mochaExplorer.require": "ts-node/register"
+}

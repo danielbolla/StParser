@@ -1,0 +1,12 @@
+dist
+doc
+src
+tests
+.eslintignore
+.editorconfig
+.git
+.git/
+.gitignore
+.github/
+.vscode/
+.eslintrc.json
