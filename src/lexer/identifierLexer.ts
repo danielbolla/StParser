@@ -3,28 +3,21 @@ import Lexer from './lexer';
 import TokenKind from './tokenKind';
 
 export default function lexIdentifier(lexer: Lexer): IToken | null {
-  if(!isLiteralStart(lexer.current())) return null;
+  if(!isIdentifierStart(lexer.current())) return null;
 
-  const index = lexer.index;
-  let code = lexer.current();
-  lexer.index++;
+  let identifierName = lexer.current();
+  let offset = 1;
   while(true) {
-    if(!isLiteralMiddle(lexer.current())) break;
-    code += lexer.current();
-    lexer.index++;
+    if(!isIdentifierMiddle(lexer.lookAhead(offset))) break;
+    identifierName += lexer.lookAhead(offset++);
   }
-  return {
-    kind: TokenKind.Identifier,
-    code,
-    index,
-    value: code
-  };
+  return lexer.newToken(TokenKind.Identifier, offset, identifierName);
 }
 
-function isLiteralStart(character: string): boolean {
+function isIdentifierStart(character: string): boolean {
   return new RegExp('^[a-zA-Z_]$').test(character);
 }
 
-function isLiteralMiddle(character: string): boolean {
+export function isIdentifierMiddle(character: string): boolean {
   return new RegExp('^[a-zA-Z_0-9]$').test(character);
 }

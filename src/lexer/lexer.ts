@@ -1,14 +1,15 @@
 import IToken from './token';
+import lexOperator from './operatorLexer';
 import TokenKind from './tokenKind';
 import lexIdentifier from './identifierLexer';
 
 export default class Lexer {
-  public  index = 0;
+  private index = 0;
 
-  constructor(public code: string) {}
+  constructor(private code: string) {}
 
   current = (): string => this.code[this.index];
-  lookAhead = (offset: number): string => this.code[this.index + offset];
+  lookAhead = (offset: number, length = 1): string => this.code.substr(this.index + offset, length);
 
   lex(): IToken[] {
     const tokens: IToken[] = [];
@@ -21,10 +22,22 @@ export default class Lexer {
     return tokens;
   }
 
+  newToken(kind: TokenKind, length = 1, value: any = null): IToken {
+    const index = this.index;
+    this.index += length;
+    return {
+      kind,
+      index,
+      code: this.code.substr(index, length),
+      value
+    };
+  }
+
   getNextToken(): IToken {
     let token: IToken | null = null;
 
-    if(token = lexIdentifier(this)) return token;
+    if(token = lexOperator(this)) return token;
+    else if(token = lexIdentifier(this)) return token;
     else {
       return {
         code: this.current(),

@@ -13,12 +13,11 @@ enum TokenKind {
 
     // Arithmetic Operators
     AddOperator,
-    SubtructOperator,
+    SubtractOperator,
     MultiplyOperator,
     DivideOperator,
     ModuloOperator,
     MoveOperator,
-    IndexOfOperator,
     SizeOfOperator,
 
     // Bitstring Operators

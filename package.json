@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/danielbolla/StParser/issues"
   },
-  "homepage": "https://github.com/danielbolla//StParser",
+  "homepage": "https://github.com/danielbolla/StParser",
   "devDependencies": {
     "@types/chai": "^4.2.11",
     "@types/fs-extra": "^8.1.0",
