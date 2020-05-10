@@ -47,12 +47,12 @@ enum TokenKind {
     SizeOfOperator,
 
     // Bitstring Operators
-    _AndOperator,
-    _OrOperator,
-    _XOrOperator,
-    _NotOperator,
-    _AndThenOperator,
-    _OrElseOperator,
+    AndOperator,
+    AndThenOperator,
+    NotOperator,
+    OrOperator,
+    OrElseOperator,
+    XOrOperator,
 
     // Bitshift Operators
     _ShiftLeftOperator,
