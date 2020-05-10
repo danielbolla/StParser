@@ -68,12 +68,12 @@ enum TokenKind {
     _MultiplexerOperator,
 
     // Comparison Operators
-    _GreaterThanOperator,
-    _LessThanOperator,
-    _LessEqualOperator,
-    _GreaterEqualOperator,
-    _EqualOperator,
-    _NotEqualOperator,
+    EqualOperator,
+    GreaterEqualOperator,
+    GreaterThanOperator,
+    LessEqualOperator,
+    LessThanOperator,
+    NotEqualOperator,
 
     // Address Operators
     _AddressOperator,
