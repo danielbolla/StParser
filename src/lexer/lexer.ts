@@ -4,6 +4,7 @@ import TokenKind from './tokenKind';
 import lexIdentifier from './identifierLexer';
 import lexWhiteSpace from './whitespaceLexer';
 import lexLiteral from './literalLexer';
+import lexKeyword from './keywordLexer';
 
 export default class Lexer {
   private index = 0;
@@ -40,6 +41,7 @@ export default class Lexer {
     if(token = lexOperator(this)) return token;
     else if(token = lexWhiteSpace(this)) return token;
     else if(token = lexLiteral(this)) return token;
+    else if(token = lexKeyword(this)) return token;
     else if(token = lexIdentifier(this)) return token;
     else {
       return {
