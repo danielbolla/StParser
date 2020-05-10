@@ -7,7 +7,7 @@ enum TokenKind {
 
   // separators
   WhitespaceSeparator,
-  _NewLineSeparator,
+  NewLineSeparator,
 
   // Operators
 

@@ -20,7 +20,7 @@ describe('whitespace lexer', () => {
       value: null
     });
     expect(result[3]).eql({
-      kind: TokenKind.WhitespaceSeparator,
+      kind: TokenKind.NewLineSeparator,
       index: 13,
       code: '\r\n',
       value: null
